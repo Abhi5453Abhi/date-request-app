@@ -154,6 +154,7 @@ export default function LovePage() {
                     alt={`Memory ${index + 1}`}
                     fill
                     className="object-cover"
+                    unoptimized
                   />
                 </div>
                 <div className="p-6">
