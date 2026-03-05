@@ -20,9 +20,9 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "File must be less than 5MB" }, { status: 400 });
     }
 
-    // Upload to Vercel Blob
+    // Upload to Vercel Blob (private store)
     const blob = await put(`photos/${Date.now()}-${file.name}`, file, {
-      access: "public",
+      access: "private",
       addRandomSuffix: true,
       token: process.env.DATE_BLOB_READ_WRITE_TOKEN,
     });
